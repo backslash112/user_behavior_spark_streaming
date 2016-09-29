@@ -28,7 +28,7 @@ class UserBehaviorMsgProducer(brokers: String, topic: String) extends Runnable {
 		while (true) {
 			// how many user behavior messages will be produced
 			var msgNum = rand.nextInt(MAX_MSG_NUM) + 1
-			try { 
+			try {
 				for( i <- 0 to msgNum) {
 					//generate the message with format like page1|2|7.123|1
 					var msg = new StringBuilder()
@@ -47,9 +47,9 @@ class UserBehaviorMsgProducer(brokers: String, topic: String) extends Runnable {
 			  case e: Exception => println(e)
 			}
 
-			try { 
+			try {
 				// sleep for 5 seconds after send a micro batch of message
-				Thread.sleep(5000)  
+				Thread.sleep(5000)
 			} catch {
 			  case e: Exception => println(e)
 			}
@@ -57,10 +57,10 @@ class UserBehaviorMsgProducer(brokers: String, topic: String) extends Runnable {
 	}
 
 	def sendMessage(message: String) = {
-		try { 
+		try {
 			// TODO:
 			// val data = new KeyedMessage[String, String](this.topic, message)
-			// send the message using the producer  
+			// send the message using the producer
 		} catch {
 		  case e: Exception => println(e)
 		}
