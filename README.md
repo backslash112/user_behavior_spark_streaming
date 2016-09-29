@@ -8,7 +8,7 @@ Step 1: start a docker container:
 
 Step 2: load .scala file in scala shell:
 
-    :load UserBehaviorProducerClient.scala
+    :load producer/UserBehaviorProducerClient.scala
 
 Step 3: run the class:
 
